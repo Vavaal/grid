@@ -2,38 +2,94 @@ body {
   margin: 40px;
 }
 
-.wrapper {
-    display: grid;
-    grid-gap: 10px;
-        grid-template-columns: 100px 100px 100px;
-        background-color: #fff;
-        color: #444;
-    }
+.personnages {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-gap: 10px;
+  background-color: #fff;
+  color: #444;
+  grid-template-areas:
+      "hero"
+      "sidekick-a"
+      "sidekick-b"
+      "minor-a"
+      "minor-b"
+      "minor-c"
+      "minor-d"
+      "minor-e"
+      "minor-f";
+}
 
-    .box {
-        background-color: #444;
-        color: #fff;
-        border-radius: 5px;
-        padding: 20px;
-        font-size: 150%;
-    }
+.personnage {
+  color: #fff;
+  border-radius: 5px;
+  padding: 20px;
+  font-size: 100%;
+}
 
-    .hero {
-        grid-column: 1 / 3;
-        grid-row: 1;
-    }
+.personnage-beemo {
+  background-color: #BAE0CD;
+  border: 1px solid #23B1A5;
+}
 
-    .s-a {
-        grid-column: 3 ;
-        grid-row: 1 / 3;
-    }
+.personnage-finn {
+  background-color: #00ADE3;
+  border-color: 1px solid #FFFFFF;
+}
 
-    .s-b {
-        grid-column: 1 ;
-        grid-row: 2 ;
-    }
+.personnage-jack {
+  background-color: #FCB823;
+}
 
-    .m-a {
-        grid-column: 2;
-        grid-row: 2;
-    }
+.personnage-marceline {
+  background-color: #EEF1F3;
+  border-color: 1px solid #020306;   
+}
+
+.personnage-miss-rainicorn {
+  background-color: #E0ABCE;
+  border-color: 1px solid #F8F390;     
+}
+
+.personnage-princesse-chewingum {
+  background-color: #E7CEE3;
+  border-color: 1px solid #F299BF;     
+}
+
+.personnage-princesse-des-flammes {
+  background-color: #FFA300;
+  border-color: 1px solid #FF410B;     
+}
+
+.personnage-princesse-lumpy-space {
+  background-color: #BB9DC8;
+  border-color: 1px solid #FFDF74;     
+}
+
+.personnage-roi-des-glaces {
+  background-color: #A3D8F5;
+  border-color: 1px solid #0072BC; 
+  grid-area:hero;
+}
+
+/** PORTABLE **/
+
+media screen (max-width:360px){
+.personnages {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 10px;
+  background-color: #fff;
+  color: #444;
+  grid-template-areas:
+      "hero"
+      "sidekick-a"
+      "sidekick-b"
+      "minor-a"
+      "minor-b"
+      "minor-c"
+      "minor-d"
+      "minor-e"
+      "minor-f";
+}   
+}
