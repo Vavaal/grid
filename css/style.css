@@ -17,7 +17,8 @@ body {
       "minor-c"
       "minor-d"
       "minor-e"
-      "minor-f";
+      "minor-f"
+      "minor-g";
 }
 
 .personnage {
@@ -27,57 +28,78 @@ body {
   font-size: 100%;
 }
 
+.personnage:hover {
+  font-size:30px;
+  transition:1s;
+  border-radius: 60px;
+  border: 10px solid;
+}
+
 .personnage-beemo {
   background-color: #BAE0CD;
-  border: 1px solid #23B1A5;
+  border: 2px solid #23B1A5;
+  grid-area:sidekick-a;
 }
 
 .personnage-finn {
   background-color: #00ADE3;
-  border-color: 1px solid #FFFFFF;
+  border: 2px solid #FFFFFF;
+  grid-area:sidekick-b;
 }
 
 .personnage-jack {
   background-color: #FCB823;
+  grid-area:minor-a;
 }
 
 .personnage-marceline {
   background-color: #EEF1F3;
-  border-color: 1px solid #020306;   
+  border: 2px solid gray;  
+  grid-area:minor-b;
 }
 
 .personnage-miss-rainicorn {
   background-color: #E0ABCE;
-  border-color: 1px solid #F8F390;     
+  border: 2px solid #F8F390;  
+  grid-area:minor-c;
 }
 
 .personnage-princesse-chewingum {
   background-color: #E7CEE3;
-  border-color: 1px solid #F299BF;     
+  border: 2px solid #F299BF;  
+  grid-area:minor-d;
 }
 
 .personnage-princesse-des-flammes {
   background-color: #FFA300;
-  border-color: 1px solid #FF410B;     
+  border: 2px solid #FF410B;   
+  grid-area:minor-e;
 }
 
 .personnage-princesse-lumpy-space {
   background-color: #BB9DC8;
-  border-color: 1px solid #FFDF74;     
+  border: 2px solid #FFDF74;  
+  grid-area:minor-f;
+}
+
+.personnage-autres {
+  background-color: red;
+  border: 2px solid black; 
+  grid-area:minor-g;
 }
 
 .personnage-roi-des-glaces {
   background-color: #A3D8F5;
-  border-color: 1px solid #0072BC; 
+  border: 2px solid #0072BC; 
   grid-area:hero;
 }
 
-/** PORTABLE **/
+/** PORTABLE PETIT ECRAN **/
 
-media screen (max-width:360px){
+@media (max-width:360px){
 .personnages {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr;
   grid-gap: 10px;
   background-color: #fff;
   color: #444;
@@ -90,6 +112,78 @@ media screen (max-width:360px){
       "minor-c"
       "minor-d"
       "minor-e"
-      "minor-f";
+      "minor-f"
+      "minor-g";
+}
+}
+
+/** PORTABLE GRAND ECRAN **/
+
+@media (min-width:360px) and (max-width:640px){
+.personnages {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 10px;
+  background-color: #fff;
+  color: #444;
+  grid-template-areas:
+      "hero sidekick-a"
+      "sidekick-b minor-a"
+      "minor-b minor-c"
+      "minor-d minor-e"
+      "minor-f minor-g";
+}        
+}
+
+/** TABLETTE FORMAT PAYSAGE **/
+
+@media (min-width:640px) and (max-width:768px){
+.personnages {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 10px;
+  background-color: #fff;
+  color: #444;
+  grid-template-areas:
+      "hero hero"
+      "sidekick-a sidekick-b"
+      "minor-a minor-b"
+      "minor-c minor-d"
+      "minor-e minor-f"
+      "minor-g minor-g";
 }   
+}
+
+/** PETITS ECRANS **/
+
+@media (min-width:768px) and (max-width:1024px){
+.personnages {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 10px;
+  background-color: #fff;
+  color: #444;
+  grid-template-areas:
+      "hero hero sidekick-a"
+      "sidekick-b minor-a minor-b"
+      "minor-c minor-d minor-d"
+      "minor-e minor-e minor-f"
+      "minor-g minor-g  minor-g";
+}   
+}
+
+/** ECRANS NORMAUX **/
+
+@media (min-width:1024px) and (max-width:1280px){
+.personnages {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 10px;
+  background-color: #fff;
+  color: #444;
+  grid-template-areas:
+      "hero sidekick-a sidekick-b minor-a"
+      "minor-b minor-c minor-d minor-e"
+      "minor-f minor-g minor-g minor-g";
+}
 }
