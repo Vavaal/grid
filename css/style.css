@@ -29,10 +29,10 @@ body {
 }
 
 .personnage:hover {
-  font-size:30px;
+  font-size:20px;
   transition:1s;
-  border-radius: 60px;
-  border: 10px solid;
+  border-radius: 10px;
+  border: 5px solid;
 }
 
 .personnage-beemo {
@@ -183,7 +183,7 @@ body {
   color: #444;
   grid-template-areas:
       "hero sidekick-a sidekick-b minor-a"
-      "minor-b minor-c minor-d minor-e"
-      "minor-f minor-g minor-g minor-g";
+      "minor-b minor-c minor-d minor-a"
+      "minor-e minor-f minor-g minor-g";
 }
 }
